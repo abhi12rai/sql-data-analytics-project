@@ -1,60 +1,66 @@
-📊 Sales & Customer Insights: Data Analytics Portfolio
-From Raw Data to Actionable Business Intelligence
-🚀 Project Overview
-This project focuses on the End-to-End Data Analysis Lifecycle. Using data integrated from ERP and CRM systems, I performed extensive data cleansing, exploratory data analysis (EDA), and data modeling to transform raw CSV files into a source of truth for business decision-making.
+# 📊 Sales & Customer Insights: Data Analytics Portfolio
+### *From Raw Data to Actionable Business Intelligence*
 
-Key Focus: Data Cleansing, SQL-based EDA, Star Schema Modeling, and Strategic Reporting.
+---
 
-🏗️ Analytics Architecture (Medallion Logic)
+## 🚀 Project Overview
+This project focuses on the **End-to-End Data Analysis Lifecycle**. Using data integrated from ERP and CRM systems, I performed extensive data cleansing, exploratory data analysis (EDA), and data modeling to transform raw CSV files into a source of truth for business decision-making.
+
+> **Key Focus:** Data Cleansing, SQL-based EDA, Star Schema Modeling, and Strategic Reporting.
+
+---
+
+## 🏗️ Analytics Architecture (Medallion Logic)
 To ensure data integrity, I followed a structured 3-layer approach to process the information:
 
-Bronze (Raw): Ingested raw ERP/CRM data into SQL Server.
+* **Bronze (Raw):** Ingested raw ERP/CRM data into SQL Server.
+* **Silver (Cleansed):** Performed data standardization, handled missing values, and resolved duplicates to ensure high data quality.
+* **Gold (Curated):** Developed a **Star Schema** with optimized Fact and Dimension tables ready for high-performance analytical querying.
 
-Silver (Cleansed): Performed data standardization, handled missing values, and resolved duplicates to ensure high data quality.
 
-Gold (Curated): Developed a Star Schema with optimized Fact and Dimension tables ready for high-performance analytical querying.
 
-🛠️ My Data Analyst Workflow
-1. Data Cleaning & Transformation (The "Silver" Phase)
-Normalization: Converted flat files into relational structures.
+---
 
-Data Quality: Resolved inconsistencies between CRM and ERP datasets (e.g., date formats, naming conventions).
+## 🛠️ My Data Analyst Workflow
 
-Validation: Wrote SQL scripts to ensure zero data loss during the ETL process.
+### 1. Data Cleaning & Transformation (The "Silver" Phase)
+* **Normalization:** Converted flat files into relational structures.
+* **Data Quality:** Resolved inconsistencies between CRM and ERP datasets (e.g., date formats, naming conventions).
+* **Validation:** Wrote SQL scripts to ensure zero data loss during the ETL process.
 
-2. Exploratory Data Analysis (EDA)
+### 2. Exploratory Data Analysis (EDA)
 Using SQL, I interrogated the data to uncover:
+* **Customer Behavior:** Identifying high-value segments and churn risks.
+* **Product Performance:** Analyzing top-performing categories vs. underperforming SKUs.
+* **Sales Trends:** Month-over-Month (MoM) growth and seasonal patterns.
 
-Customer Behavior: Identifying high-value segments and churn risks.
+### 3. Data Modeling (The "Gold" Phase)
+* Designed a **Business-Ready Star Schema**.
+* Built Fact tables for Sales Transactions and Dimension tables for Products, Customers, and Geography.
 
-Product Performance: Analyzing top-performing categories vs. underperforming SKUs.
 
-Sales Trends: Month-over-Month (MoM) growth and seasonal patterns.
 
-3. Data Modeling (The "Gold" Phase)
-Designed a Business-Ready Star Schema.
+---
 
-Built Fact tables for Sales Transactions and Dimension tables for Products, Customers, and Geography.
+## 🎯 Skills Demonstrated
+* **Advanced SQL:** Window Functions, CTEs, Joins, and Aggregations.
+* **Data Modeling:** Designing Fact/Dimension tables and Star Schemas.
+* **Business Intelligence:** Translating raw numbers into KPI-driven reports.
+* **Tools:** SQL Server, SSMS, Draw.io (for Schema design), Git.
 
-🎯 Skills Demonstrated
-Advanced SQL: Window Functions, CTEs, Joins, and Aggregations.
+---
 
-Data Modeling: Designing Fact/Dimension tables and Star Schemas.
+## 📖 Key Business Insights Delivered
+* **Trend Analysis:** Identified key sales fluctuations and seasonal growth patterns.
+* **Customer Segmentation:** Isolated high-value customer segments contributing to the majority of revenue.
+* **Optimization:** Provided data-backed recommendations on product performance and stock management.
 
-Business Intelligence: Translating raw numbers into KPI-driven reports.
+---
 
-Tools: SQL Server, SSMS, Draw.io (for Schema design), Git.
+## 🚀 How to Use This Repo
+1.  **Datasets:** Raw CSV files are located in the `/data` folder.
+2.  **SQL Scripts:** Find the cleaning and analysis scripts in `/scripts`.
+3.  **Documentation:** View the full Data Model diagram in `/docs`.
 
-📖 Key Business Insights Delivered
-Trend Analysis: Identified a [X]% increase in sales during [Specific Period].
-
-Customer Segmentation: Isolated the top 10% of customers contributing to [X]% of total revenue.
-
-Optimization: Recommended [Action] based on product performance metrics.
-
-🚀 How to Use This Repo
-Datasets: Raw CSV files are located in the /data folder.
-
-SQL Scripts: Find the cleaning and analysis scripts in /scripts.
-
-Documentation: View the full Data Model diagram in /docs.
+---
+**Contact:** [Your Name] | [Your LinkedIn Link] | [Your Email]
