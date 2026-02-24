@@ -1,3 +1,15 @@
+/*
+===============================================================================
+Script: Data Discovery & Transformation Logic
+===============================================================================
+Purpose: 
+    - Test joins between Silver layer tables.
+    - Perform Data Quality (DQ) checks (duplicates, nulls).
+    - Prototype transformations and business logic.
+    - Validate results before moving to final Gold Layer Views.
+===============================================================================
+*/
+
 ===============================================================================
 -- DDL Script: Create Gold Views (Raw Scripts)
 ===============================================================================
