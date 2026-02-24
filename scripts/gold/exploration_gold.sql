@@ -298,7 +298,7 @@ WHERE pn.prd_end_dt IS NULL;
 -- Generate a Surrogate Key using Window Function
 
 IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
-    DROP VIEW gold.dim_product;
+    DROP VIEW gold.dim_products;
 GO
 
 CREATE VIEW gold.dim_products AS 
