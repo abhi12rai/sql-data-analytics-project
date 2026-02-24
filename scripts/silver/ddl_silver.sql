@@ -91,7 +91,8 @@ GO
 
 
 -- During Data Cleaning & Loading, there is some changes in Meta Data of table silver.crm_prd_info & silver.crm_sales_details 
-
+-- silver.crm_prd_info
+-- Add new column cat_id    
 IF OBJECT_ID('silver.crm_prd_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_prd_info;
 GO
@@ -109,6 +110,9 @@ CREATE TABLE silver.crm_prd_info (
 );
 GO
 
+
+-- silver.crm_sales_details
+-- Changed data type of sls_order_dt, sls_ship_dt & sls_due_dt from INT to DATE
 IF OBJECT_ID('silver.crm_sales_details', 'U') IS NOT NULL
     DROP TABLE silver.crm_sales_details;
 GO
