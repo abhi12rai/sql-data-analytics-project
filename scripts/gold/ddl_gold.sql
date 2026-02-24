@@ -46,7 +46,7 @@ GO
 -- Create Dimension: gold.dim_products
 -- =============================================================================
 IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
-    DROP VIEW gold.dim_product;
+    DROP VIEW gold.dim_products;
 GO
 
 CREATE VIEW gold.dim_products AS 
