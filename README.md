@@ -1,66 +1,84 @@
-# 📊 Sales & Customer Insights: Data Analytics Portfolio
-### *From Raw Data to Actionable Business Intelligence*
+📊 End-to-End SQL Data Analytics & Business Intelligence Portfolio
+🚀 Project Overview
+This project showcases a complete, end-to-end data analytics workflow using Microsoft SQL Server. The primary objective is to demonstrate the ability to take raw, messy data from multiple sources (ERP and CRM systems), clean and model it, and ultimately generate actionable business intelligence.
 
----
+I built this project to showcase a comprehensive understanding of the SQL Server ecosystem, utilizing everything from fundamental DDL/DML commands to advanced analytical functions, stored procedures, data validation, and views.
 
-## 🚀 Project Overview
-This project focuses on the **End-to-End Data Analysis Lifecycle**. Using data integrated from ERP and CRM systems, I performed extensive data cleansing, exploratory data analysis (EDA), and data modeling to transform raw CSV files into a source of truth for business decision-making.
+🏗️ Data Preparation & Architecture
+To ensure data integrity and reporting accuracy, I implemented a Medallion Architecture (Bronze, Silver, Gold) to process the data before analysis.
 
-> **Key Focus:** Data Cleansing, SQL-based EDA, Star Schema Modeling, and Strategic Reporting.
+Bronze Layer (Raw): Ingested raw CSV files directly into SQL Server. Focus: Database & Schema creation, Bulk Insert operations.
 
----
+Silver Layer (Cleansed & Validated): Standardized date formats, handled NULL values, and resolved inconsistencies.
 
-## 🏗️ Analytics Architecture (Medallion Logic)
-To ensure data integrity, I followed a structured 3-layer approach to process the information:
+Data Quality Checks: Wrote rigorous SQL test scripts to identify duplicate primary keys, remove unwanted spaces (TRIM), validate date ranges, and mathematically verify data consistency (e.g., Sales = Quantity * Price).
 
-* **Bronze (Raw):** Ingested raw ERP/CRM data into SQL Server.
-* **Silver (Cleansed):** Performed data standardization, handled missing values, and resolved duplicates to ensure high data quality.
-* **Gold (Curated):** Developed a **Star Schema** with optimized Fact and Dimension tables ready for high-performance analytical querying.
+Gold Layer (Analytics-Ready): Transformed the cleaned data into a Star Schema (Fact and Dimension tables) to serve as the single source of truth.
 
+Integrity Checks: Validated surrogate key uniqueness and ensured perfect referential integrity between Fact and Dimension tables before running analytics.
 
+🛠️ The Analytics Workflow
+Once the data was modeled and validated, I conducted a systematic two-phase analytical deep dive.
 
----
+Phase 1: Exploratory Data Analysis (EDA)
+Using SQL, I systematically interrogated the database to understand data distributions, validate data health, and establish baselines before diving into deeper analysis:
 
-## 🛠️ My Data Analyst Workflow
+01_database_exploration: Explored the overall database structure, inspecting table schemas, columns, and metadata to ensure a solid foundational understanding.
 
-### 1. Data Cleaning & Transformation (The "Silver" Phase)
-* **Normalization:** Converted flat files into relational structures.
-* **Data Quality:** Resolved inconsistencies between CRM and ERP datasets (e.g., date formats, naming conventions).
-* **Validation:** Wrote SQL scripts to ensure zero data loss during the ETL process.
+02_dimensions_exploration: Profiled the structure of the dimension tables to analyze categorical data and unique values.
 
-### 2. Exploratory Data Analysis (EDA)
-Using SQL, I interrogated the data to uncover:
-* **Customer Behavior:** Identifying high-value segments and churn risks.
-* **Product Performance:** Analyzing top-performing categories vs. underperforming SKUs.
-* **Sales Trends:** Month-over-Month (MoM) growth and seasonal patterns.
+03_date_exploration: Determined the temporal boundaries of key data points to understand the exact range of historical data available.
 
-### 3. Data Modeling (The "Gold" Phase)
-* Designed a **Business-Ready Star Schema**.
-* Built Fact tables for Sales Transactions and Dimension tables for Products, Customers, and Geography.
+04_measures_exploration: Calculated core aggregated metrics (totals, averages) to establish quick baselines and spot high-level anomalies or trends.
 
+05_magnitude_analysis: Quantified the data and grouped results by specific dimensions to understand distribution and scale across various categories.
 
+06_ranking_analysis: Ranked key entities like products and customers to quickly identify top performers and laggards based on specific performance metrics.
 
----
+Phase 2: Advanced Analytics & Reporting
+I developed a suite of complex SQL scripts to derive deep business intelligence, track KPIs, and build comprehensive entity reports:
 
-## 🎯 Skills Demonstrated
-* **Advanced SQL:** Window Functions, CTEs, Joins, and Aggregations.
-* **Data Modeling:** Designing Fact/Dimension tables and Star Schemas.
-* **Business Intelligence:** Translating raw numbers into KPI-driven reports.
-* **Tools:** SQL Server, SSMS, Draw.io (for Schema design), Git.
+07_change_over_time_analysis: Tracked key metric trends, growth, and decline over specific time periods to identify seasonality and historical business patterns.
 
----
+08_cumulative_analysis: Calculated running totals and moving averages to track cumulative performance and identify long-term growth trends.
 
-## 📖 Key Business Insights Delivered
-* **Trend Analysis:** Identified key sales fluctuations and seasonal growth patterns.
-* **Customer Segmentation:** Isolated high-value customer segments contributing to the majority of revenue.
-* **Optimization:** Provided data-backed recommendations on product performance and stock management.
+09_performance_analysis: Benchmarked the performance of products, customers, and regions against historical data to identify high-performing entities and yearly trends (leveraging advanced SQL like LAG(), AVG() OVER(), and CASE statements).
 
----
+10_part_to_whole_analysis: Evaluated categorical differences and compared metrics across dimensions to understand proportional contributions (useful for regional comparisons and A/B testing).
 
-## 🚀 How to Use This Repo
-1.  **Datasets:** Raw CSV files are located in the `/data` folder.
-2.  **SQL Scripts:** Find the cleaning and analysis scripts in `/scripts`.
-3.  **Documentation:** View the full Data Model diagram in `/docs`.
+11_data_segmentation_analysis: Applied custom logic using CASE and GROUP BY to group data into meaningful categories, allowing for highly targeted customer and product insights.
 
----
-**Contact:** [Your Name] | [Your LinkedIn Link] | [Your Email]
+12_customer_report: Built a comprehensive view of customer behavior. Consolidated essential demographic and transaction data, segmented users (VIP, Regular, New), and aggregated core metrics (lifespan, total sales) to calculate high-value KPIs like Recency, Average Order Value (AOV), and Average Monthly Spend.
+
+13_product_report: Developed a detailed breakdown of inventory and product performance. Segmented products by revenue tier (High, Mid, Low-Performers) and aggregated metrics (unique customers, total sales) to calculate crucial KPIs such as Recency, Average Order Revenue (AOR), and Average Monthly Revenue.
+
+🎯 SQL Skills & Techniques Demonstrated
+This project is built entirely in SQL and demonstrates proficiency in:
+
+Database Management: CREATE DATABASE, SCHEMA, TABLE, DROP, TRUNCATE, ALTER.
+
+Data Automation: Writing and executing Stored Procedures to automate the ETL (Extract, Transform, Load) pipelines.
+
+Data Quality Assurance: Writing validation scripts to enforce constraints and data consistency.
+
+Advanced Querying: CTEs (Common Table Expressions), Subqueries, JOINs (Inner, Left, Right).
+
+Window Functions: ROW_NUMBER(), RANK(), LAG(), SUM() OVER(), AVG() OVER().
+
+Business Logic: Complex CASE WHEN statements for dynamic segmentation and data categorization.
+
+Reporting: Creating VIEWS to act as virtual tables for reporting tools (like Power BI/Tableau) to consume.
+
+📂 Repository Navigation
+/data - Contains the raw source files.
+
+/docs - Contains Data Dictionaries and architectural diagrams.
+
+/tests - Contains data quality checks and validation scripts for the Silver and Gold layers.
+
+/sql/transformation - Contains the DDL/DML scripts and Stored Procedures for the Bronze, Silver, and Gold layers.
+
+/sql/analytics - Contains the numbered SQL scripts (01 to 13) for EDA and Advanced Analytics.
+
+Author: Abhishek Rai
+Connect with me: [linkedin.com/in/abhishek-rai-5054001b7] | [abhishek566rai@gmail.com]
