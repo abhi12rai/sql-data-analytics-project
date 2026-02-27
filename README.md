@@ -57,7 +57,7 @@ This project is built entirely in SQL and demonstrates proficiency in:
 ---
 
 ## 📂 Repository Navigation
-* **`/data`** - Contains the raw source files.
+* **`/datasets`** - Contains the raw source files.
 * **`/docs`** - Contains Data Dictionaries and architectural diagrams.
 * **`/tests`** - Contains data quality checks and validation scripts for the Silver and Gold layers.
 * **`/sql/transformation`** - Contains the DDL/DML scripts and Stored Procedures for the Bronze, Silver, and Gold layers.
