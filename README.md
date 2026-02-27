@@ -1,69 +1,116 @@
-# 📊 End-to-End SQL Data Analytics & Business Intelligence Portfolio
+# 📊 End-to-End SQL Data Analytics & Business Intelligence Project  
 
-## 🚀 Project Overview
-This project showcases a complete, end-to-end data analytics workflow using **Microsoft SQL Server**. The primary objective is to demonstrate the ability to take raw, messy data from multiple sources (ERP and CRM systems), clean and model it, and ultimately generate actionable business intelligence. 
+## 🚀 Project Overview  
 
-I built this project to showcase a comprehensive understanding of the SQL Server ecosystem, utilizing everything from fundamental DDL/DML commands to advanced analytical functions, stored procedures, data validation, and views.
+This project demonstrates a complete end-to-end Data Analytics workflow using Microsoft SQL Server.
 
----
-
-## 🏗️ Data Preparation & Architecture
-To ensure data integrity and reporting accuracy, I implemented a Medallion Architecture (Bronze, Silver, Gold) to process the data before analysis. 
-
-* **Bronze Layer (Raw):** Ingested raw CSV files directly into SQL Server. Focus: *Database & Schema creation, Bulk Insert operations.*
-* **Silver Layer (Cleansed & Validated):** Standardized date formats, handled NULL values, and resolved inconsistencies. 
-    * **Data Quality Checks:** Wrote rigorous SQL test scripts to identify duplicate primary keys, remove unwanted spaces (`TRIM`), validate date ranges, and mathematically verify data consistency (e.g., `Sales = Quantity * Price`).
-* **Gold Layer (Analytics-Ready):** Transformed the cleaned data into a **Star Schema** (Fact and Dimension tables) to serve as the single source of truth. 
-    * **Integrity Checks:** Validated surrogate key uniqueness and ensured perfect referential integrity between Fact and Dimension tables before running analytics.
+The objective was to transform raw ERP and CRM data into structured, analytics-ready datasets and generate actionable business insights that support data-driven decision-making.
 
 ---
 
-## 🛠️ The Analytics Workflow
-Once the data was modeled and validated, I conducted a systematic two-phase analytical deep dive.
+## 🎯 Business Objective  
+
+The goal of this project was to:
+
+- Analyze customer purchasing behavior  
+- Identify high-performing and underperforming products  
+- Track revenue trends over time  
+- Segment customers based on value and activity  
+- Generate KPIs to support strategic business decisions  
+
+---
+
+## 🏗️ Data Architecture (Medallion Framework)
+
+To ensure data accuracy and reliability, I implemented a **Bronze → Silver → Gold** architecture:
+
+### 🥉 Bronze Layer (Raw Data)
+- Ingested raw CSV files into SQL Server  
+- Created databases, schemas, and base tables  
+- Performed bulk insert operations  
+
+### 🥈 Silver Layer (Cleaned & Validated Data)
+- Standardized date formats  
+- Handled NULL values  
+- Removed duplicates and unwanted spaces  
+- Performed data quality checks:
+  - Primary key validation  
+  - Date range validation  
+  - Verified calculated fields (Sales = Quantity × Price)  
+
+### 🥇 Gold Layer (Analytics-Ready Model)
+- Designed a Star Schema (Fact & Dimension tables)  
+- Ensured referential integrity  
+- Validated surrogate key uniqueness  
+- Created reporting views for analysis  
+
+---
+
+## 🔎 Analytical Approach  
+
+The analysis was conducted in two phases:
 
 ### Phase 1: Exploratory Data Analysis (EDA)
-Using SQL, I systematically interrogated the database to understand data distributions, validate data health, and establish baselines before diving into deeper analysis:
+- Database and schema exploration  
+- Dimension profiling  
+- Date range validation  
+- Baseline KPI calculations  
+- Ranking products and customers  
 
-* **`01_database_exploration`**: Explored the overall database structure, inspecting table schemas, columns, and metadata to ensure a solid foundational understanding.
-* **`02_dimensions_exploration`**: Profiled the structure of the dimension tables to analyze categorical data and unique values.
-* **`03_date_exploration`**: Determined the temporal boundaries of key data points to understand the exact range of historical data available.
-* **`04_measures_exploration`**: Calculated core aggregated metrics (totals, averages) to establish quick baselines and spot high-level anomalies or trends.
-* **`05_magnitude_analysis`**: Quantified the data and grouped results by specific dimensions to understand distribution and scale across various categories.
-* **`06_ranking_analysis`**: Ranked key entities like products and customers to quickly identify top performers and laggards based on specific performance metrics.
-
-### Phase 2: Advanced Analytics & Reporting
-I developed a suite of complex SQL scripts to derive deep business intelligence, track KPIs, and build comprehensive entity reports:
-
-* **`07_change_over_time_analysis`**: Tracked key metric trends, growth, and decline over specific time periods to identify seasonality and historical business patterns.
-* **`08_cumulative_analysis`**: Calculated running totals and moving averages to track cumulative performance and identify long-term growth trends.
-* **`09_performance_analysis`**: Benchmarked the performance of products, customers, and regions against historical data to identify high-performing entities and yearly trends (leveraging advanced SQL like `LAG()`, `AVG() OVER()`, and `CASE` statements).
-* **`10_part_to_whole_analysis`**: Evaluated categorical differences and compared metrics across dimensions to understand proportional contributions (useful for regional comparisons and A/B testing).
-* **`11_data_segmentation_analysis`**: Applied custom logic using `CASE` and `GROUP BY` to group data into meaningful categories, allowing for highly targeted customer and product insights.
-* **`12_customer_report`**: Built a comprehensive view of customer behavior. Consolidated essential demographic and transaction data, segmented users (VIP, Regular, New), and aggregated core metrics (lifespan, total sales) to calculate high-value KPIs like Recency, Average Order Value (AOV), and Average Monthly Spend.
-* **`13_product_report`**: Developed a detailed breakdown of inventory and product performance. Segmented products by revenue tier (High, Mid, Low-Performers) and aggregated metrics (unique customers, total sales) to calculate crucial KPIs such as Recency, Average Order Revenue (AOR), and Average Monthly Revenue.
+### Phase 2: Advanced Analytics
+- Change-over-time trend analysis  
+- Running totals and moving averages  
+- Customer and product segmentation  
+- Performance benchmarking using window functions  
+- Part-to-whole contribution analysis  
 
 ---
 
-## 🎯 SQL Skills & Techniques Demonstrated
-This project is built entirely in SQL and demonstrates proficiency in:
-* **Database Management:** `CREATE DATABASE`, `SCHEMA`, `TABLE`, `DROP`, `TRUNCATE`, `ALTER`.
-* **Data Automation:** Writing and executing **Stored Procedures** to automate the ETL (Extract, Transform, Load) pipelines.
-* **Data Quality Assurance:** Writing validation scripts to enforce constraints and data consistency.
-* **Advanced Querying:** `CTEs` (Common Table Expressions), `Subqueries`, `JOINs` (Inner, Left, Right).
-* **Window Functions:** `ROW_NUMBER()`, `RANK()`, `LAG()`, `SUM() OVER()`, `AVG() OVER()`.
-* **Business Logic:** Complex `CASE WHEN` statements for dynamic segmentation and data categorization.
-* **Reporting:** Creating `VIEWS` to act as virtual tables for reporting tools (like Power BI/Tableau) to consume.
+## 📈 Key Insights Generated  
+
+- Identified top revenue-generating customers and categorized them as VIP, Regular, and New.  
+- Measured customer Recency, Average Order Value (AOV), and Average Monthly Spend.  
+- Segmented products into High, Mid, and Low revenue tiers.  
+- Analyzed revenue growth trends and seasonality patterns.  
+- Evaluated product contribution to total sales for performance optimization.  
 
 ---
 
-## 📂 Repository Navigation
-* **`/datasets`** - Contains the raw source files.
-* **`/docs`** - Contains Data Dictionaries and architectural diagrams.
-* **`/tests`** - Contains data quality checks and validation scripts for the Silver and Gold layers.
-* **`/sql/transformation`** - Contains the DDL/DML scripts and Stored Procedures for the Bronze, Silver, and Gold layers.
-* **`/sql/analytics`** - Contains the numbered SQL scripts (01 to 13) for EDA and Advanced Analytics.
+## 🛠 Skills & SQL Techniques Demonstrated  
+
+- Database Management (CREATE, ALTER, TRUNCATE, DROP)  
+- Complex JOINs, Subqueries, and CTEs  
+- Window Functions:  
+  `ROW_NUMBER()`, `RANK()`, `LAG()`, `SUM() OVER()`, `AVG() OVER()`  
+- Stored Procedures for ETL automation  
+- Data Validation & Quality Assurance  
+- Business segmentation using `CASE WHEN`  
+- Reporting Views for BI tools  
 
 ---
 
-**Author:** Abhishek Rai  
-**Connect with me:** [LinkedIn](https://www.linkedin.com/in/abhishek-rai-5054001b7) | [Email](mailto:abhishek566rai@gmail.com)
+## 🧰 Tools & Technologies  
+
+- Microsoft SQL Server  
+- SQL Server Management Studio (SSMS)  
+- Star Schema Data Modeling  
+- Medallion Architecture  
+- Git & GitHub  
+
+---
+
+## 📂 Repository Structure  
+
+- `/datasets` → Raw source files  
+- `/docs` → Data dictionaries & architecture diagrams  
+- `/tests` → Data validation scripts  
+- `/sql/transformation` → ETL & modeling scripts  
+- `/sql/analytics` → EDA & advanced analytics queries  
+
+---
+
+## 👤 Author  
+
+**Abhishek Rai**  
+📎 linkedin.com/in/abhishek-rai-5054001b7  
+📧 Email  
