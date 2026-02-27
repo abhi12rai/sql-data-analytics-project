@@ -113,6 +113,6 @@ The analysis was conducted in two phases:
 
 **Abhishek Rai**  
 
-📎 LinkedIn: [https://www.linkedin.com/in/your-linkedin-username](linkedin.com/in/abhishek-rai-5054001b7)  
+📎 LinkedIn: [linkedin.com/in/abhishek-rai-5054001b7](https://www.linkedin.com/in/your-linkedin-username)  
 
-📧 Email: [yourname@email.com](abhishek566rai@gmail.com)
+📧 Email: [abhishek566rai@gmail.com](mailto:yourname@email.com)
